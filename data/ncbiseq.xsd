@@ -1,7 +1,7 @@
 <!--
 introduction whatever blabla
 -->
-<xs:schema xmlns="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq.xsd" xmlns:bx="http://bioxsd.org/BioXSD-1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://rostlab.org/freecontact/output" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0.0">
+<xs:schema xmlns="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq" xmlns:bx="http://bioxsd.org/BioXSD-1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0.0">
 <xs:import namespace="http://bioxsd.org/BioXSD-1.1" schemaLocation="http://bioxsd.org/BioXSD-1.1.xsd"/>
     <xs:element name="lowComplexityRegion" type="bx:FeatureRecord" sawsdl:modelReference="http://edamontology.org/data_0642">
         <xs:annotation>
