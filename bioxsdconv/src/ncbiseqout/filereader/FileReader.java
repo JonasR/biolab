@@ -145,4 +145,58 @@ public class FileReader {
         return ncbiSegObject;
     }
 
+    public NcbiSegObject read_ncbiseg_xParam(File file){
+        ncbiSegObject = new NcbiSegObject();
+        String sequence = "";
+        try {
+            in = new BufferedReader( new java.io.FileReader( file));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        try {
+            String strLine;
+            while( (strLine = in.readLine()) != null){
+                if ( strLine.startsWith(">") ){  //read headerline
+                    ncbiSegObject.idLine = strLine.substring(1);
+                }
+
+                sequence += strLine.trim();
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        ncbiSegObject.Sequence = sequence;
+
+        {
+            // build Region lists from Sequence
+            boolean inLowComplexityRegion = Character.isLowerCase( sequence.charAt(0) );
+            int first = 0;
+            int second = 0;
+            for (int i = 1; i < sequence.length(); i++){
+                if ( inLowComplexityRegion && Character.isLowerCase( sequence.charAt(i) ) ){
+                    second = i;
+                }
+                else if( inLowComplexityRegion && Character.isUpperCase( sequence.charAt(i) ) ){
+                    ncbiSegObject.lowComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                    inLowComplexityRegion = false;
+                    first = i;
+                    second = i;
+                }
+                else if ( !inLowComplexityRegion && Character.isUpperCase( sequence.charAt(i) ) ){
+                    second = i;
+                }
+                else if( !inLowComplexityRegion && Character.isLowerCase( sequence.charAt(i) ) ){
+                    ncbiSegObject.normalComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                    inLowComplexityRegion = true;
+                    first = i;
+                    second = i;
+                }
+            }
+        }
+        return ncbiSegObject;
+    }
+
 }
