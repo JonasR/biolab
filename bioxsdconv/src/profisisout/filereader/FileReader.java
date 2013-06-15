@@ -85,6 +85,32 @@ public class FileReader {
         return profIsisObject;
     }
 
+    public ProfIsisObject read_profisis_prvalParam(File file){
+        profIsisObject = new ProfIsisObject();
+        String sequence = "";
+        try {
+            in = new BufferedReader( new java.io.FileReader( file));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        try {
+            String strLine;
+
+            while( (strLine = in.readLine()) != null)  {
+                String[] tokens = strLine.split("\\s");
+                int tmp = Integer.valueOf(tokens[0]);
+                profIsisObject.positions.add(new AminoAcid(tmp, tokens[1], Integer.valueOf(tokens[2]),false ));
+                sequence += tokens[1];
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        profIsisObject.Sequence = sequence;
+        return profIsisObject;
+    }
+
 
 
 }
