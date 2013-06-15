@@ -8,22 +8,22 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.namespace.QName;
 
-import ncbiseqout.BiosequenceRecord;
-import ncbiseqout.EntryReference;
-import ncbiseqout.FeatureRecord;
-import ncbiseqout.FeatureRecord.Annotation.CondensedReferences;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.Occurrence;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Method;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.ScoreType;
-import ncbiseqout.FeatureRecord.ReferenceSequence;
-import ncbiseqout.FeatureType;
-import ncbiseqout.GeneralSequencePoint;
-import ncbiseqout.ObjectFactory;
-import ncbiseqout.Score;
-import ncbiseqout.SemanticConcept;
-import ncbiseqout.SequencePosition;
+import ncbisegout.BiosequenceRecord;
+import ncbisegout.EntryReference;
+import ncbisegout.FeatureRecord;
+import ncbisegout.FeatureRecord.Annotation.CondensedReferences;
+import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences;
+import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
+import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.Occurrence;
+import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.Method;
+import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.ScoreType;
+import ncbisegout.FeatureRecord.ReferenceSequence;
+import ncbisegout.FeatureType;
+import ncbisegout.GeneralSequencePoint;
+import ncbisegout.ObjectFactory;
+import ncbisegout.Score;
+import ncbisegout.SemanticConcept;
+import ncbisegout.SequencePosition;
 
 public class NcbiSeqOutput
 {
@@ -99,8 +99,8 @@ public class NcbiSeqOutput
 		
 		//NOTE below maybe not needed?
 		st.setName("Low complexity residue");
-		List<ncbiseqout.Method> methodList= st.getMethod();
-		ncbiseqout.Method stMet = new ncbiseqout.Method();
+		List<ncbisegout.Method> methodList= st.getMethod();
+		ncbisegout.Method stMet = new ncbisegout.Method();
 		stMet.setName("Low complexity residue");
 	}
 	
@@ -158,8 +158,9 @@ public class NcbiSeqOutput
 		{
 			JAXBElement<FeatureRecord> je = of.createLowComplexityRegion(fr);
 			
-			JAXBContext jc = JAXBContext.newInstance("ncbiseqout");
+			JAXBContext jc = JAXBContext.newInstance("ncbisegout");
 			Marshaller m = jc.createMarshaller();
+			m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbisegout.xsd");
 			m.marshal(je, System.out);
 			
 		}
