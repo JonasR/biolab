@@ -1,33 +1,49 @@
-import java.util.*;
+import java.util.GregorianCalendar;
+import java.util.List;
 
-import javax.xml.bind.*;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.Marshaller;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
+import javax.xml.namespace.QName;
 
 import ncbiseqout.BiosequenceRecord;
 import ncbiseqout.EntryReference;
 import ncbiseqout.FeatureRecord;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
-import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Method;
+import ncbiseqout.FeatureRecord.Annotation.CondensedReferences;
 import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences;
+import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
+import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.Occurrence;
+import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.Method;
 import ncbiseqout.FeatureRecord.BlockWithOccurrenceReferences.ScoreType;
-import ncbiseqout.SemanticConcept;
 import ncbiseqout.FeatureRecord.ReferenceSequence;
+import ncbiseqout.FeatureType;
+import ncbiseqout.GeneralSequencePoint;
 import ncbiseqout.ObjectFactory;
+import ncbiseqout.Score;
+import ncbiseqout.SemanticConcept;
+import ncbiseqout.SequencePosition;
 
 public class NcbiSeqOutput
 {
+	private final String methodLocalId = "M#Se";
+	
 	private ObjectFactory of;
 	private FeatureRecord fr;
+	private List<Long> lowComplexityPositions;
 	
-	public NcbiSeqOutput()
+	public NcbiSeqOutput(List<Long> lowComplexityPositions)
 	{
 		of = new ObjectFactory();
 		fr = of.createFeatureRecord();
+		this.lowComplexityPositions = lowComplexityPositions;
 	}
 	
 	public void make(String test) throws DatatypeConfigurationException
 	{
+		//TODO the whole namespace thing is still somewhat off
+		
 //		FeatureRecord fr = of.createFeatureRecord();
 		ReferenceSequence refSeq = new ReferenceSequence();
 		BiosequenceRecord bioSeqRec = new BiosequenceRecord();
@@ -42,7 +58,7 @@ public class NcbiSeqOutput
 		List<FeatureRecord.BlockWithOccurrenceReferences.Method> methodDescList = bwocr.getMethod();
 		Method ncbiSegMethod = new Method();
 		ncbiSegMethod.setVersion("0.0.20000620");
-		ncbiSegMethod.setLocalId("M#seg");
+		ncbiSegMethod.setLocalId(methodLocalId);
 		ncbiSegMethod.setName("ncbi-seg");
 		////Category concept subelement
 		List<SemanticConcept> ncbiSegMethodCatConList =  ncbiSegMethod.getCategoryConcept();
@@ -61,8 +77,9 @@ public class NcbiSeqOutput
 		methodDescList.add(ncbiSegMethod);
 		
 		
-		//ScoreTypes
-		populateScoreTypes(bwocr.getScoreType());
+		//ScoreTypes NOTE not sure if we even need this?
+		//ScoreType requires a 'value' which we don't have, so I guess we don't do this
+//		populateScoreTypes(bwocr.getScoreType());
 		
 		//Annotation
 		populateAnnotation(bwocr.getAnnotation());
@@ -78,7 +95,13 @@ public class NcbiSeqOutput
 		list.add(st);
 		
 		//Populate score type
+		st.setLocalId("S#lc");
 		
+		//NOTE below maybe not needed?
+		st.setName("Low complexity residue");
+		List<ncbiseqout.Method> methodList= st.getMethod();
+		ncbiseqout.Method stMet = new ncbiseqout.Method();
+		stMet.setName("Low complexity residue");
 	}
 	
 	private void populateAnnotation(List<Annotation> list)
@@ -87,8 +110,47 @@ public class NcbiSeqOutput
 		list.add(a);
 		
 		//Populate annotation
+		///Feature
+		FeatureType aF = new FeatureType();
+		a.setFeature(aF);
+		List<JAXBElement<?>> aFChildren = aF.getContent(); //alowed in there: JAXBElement<String> JAXBElement<FeatureTypeDetails> JAXBElement<String> JAXBElement<SemanticConcept> JAXBElement<SemanticConcept> JAXBElement<String>
+		JAXBElement<String> aFName = new JAXBElement<String>(new QName("http://bioxsd.org/BioXSD-1.1","name","bx"), String.class , "Low complexity residue");
+//		SemanticConcept equalConcept = new SemanticConcept();
+//		equalConcept.setTerm("")
+//		JAXBElement<SemanticConcept> afEqualConcept = new JAXBElement<SemanticConcept>(new QName("equalConcept"), null, new SemanticConcept().s);
+		aFChildren.add(aFName);
 		
+		//Condensed References
+		CondensedReferences cr =  new CondensedReferences();
+
+		//TODO how to add methodidref?
+		
+		//Occurrences
+		List<Occurrence> lOcc = a.getOccurrence();
+		populateOccurences(lOcc, lowComplexityPositions);
 	}
+	
+	private void populateOccurences(List<Occurrence> list, List<Long> positions)
+	{
+		for (Long pos : positions)
+		{
+			Occurrence temp = new Occurrence();
+			//position
+			SequencePosition sp = new SequencePosition();
+			GeneralSequencePoint gsp = new GeneralSequencePoint();
+			gsp.setPos(pos);
+			sp.getPoint().add(gsp);
+			temp.setPosition(sp);
+			//score
+//			List<Score> ls = temp.getScore();
+//			Score s = new Score();
+//			s.setScoreTypeIdRef("S#lc");
+//			ls.add(s);
+			
+			list.add(temp);
+		}
+	}
+	
 	
 	public void marshal()
 	{
