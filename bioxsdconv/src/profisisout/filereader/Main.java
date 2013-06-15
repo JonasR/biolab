@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args){
         //Tests
         FileReader fr = new FileReader();
-        ProfIsisObject obj = fr.read_profisis_ppParam(new File("/home/delur/biolab/profisis/profisis_ppParam.txt"));
+        ProfIsisObject obj = fr.read_profisis_prvalParam(new File("/home/delur/biolab/profisis/profisis_prvalParam.txt"));
 
         System.out.println(obj.idLine);
         System.out.println(obj.Sequence);
