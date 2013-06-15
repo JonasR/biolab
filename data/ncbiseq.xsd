@@ -1,13 +1,16 @@
 <!--
 ncbi-seg divides sequences into contrasting segments of low-complexity and high-complexity.  Low-
-       complexity segments defined by the algorithm represent "simple sequences" or "compositionally-biased
-       regions".
+complexity segments defined by the algorithm represent "simple sequences" or "compositionally-biased
+regions".
 
-       Locally-optimized low-complexity segments are produced at defined levels of stringency, based on
-       formal definitions of local compositional complexity (Wootton & Federhen, 1993).  The segment lengths
-       and the number of segments per sequence are determined automatically by the algorithm.
+Locally-optimized low-complexity segments are produced at defined levels of stringency, based on
+formal definitions of local compositional complexity (Wootton & Federhen, 1993).  The segment lengths
+and the number of segments per sequence are determined automatically by the algorithm.
 -->
-<xs:schema xmlns="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq" xmlns:bx="http://bioxsd.org/BioXSD-1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0.0">
+<xs:schema xmlns="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output" xmlns:bx="http://bioxsd.org/BioXSD-1.1"
+xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+targetNamespace="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output" attributeFormDefault="unqualified" elementFormDefault="qualified"
+version="1.0.0">
 <xs:import namespace="http://bioxsd.org/BioXSD-1.1" schemaLocation="http://bioxsd.org/BioXSD-1.1.xsd"/>
     <xs:element name="lowComplexityRegion" type="bx:FeatureRecord" sawsdl:modelReference="http://edamontology.org/data_0642">
         <xs:annotation>
