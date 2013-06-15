@@ -5,5 +5,8 @@
 // Generated on: 2013.06.11 at 11:32:28 PM CEST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://bioxsd.org/BioXSD-1.1", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+//cf. http://stackoverflow.com/questions/6895486/jaxb-need-namespace-prefix-to-all-the-elements
+
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://bioxsd.org/BioXSD-1.1", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED, xmlns={@XmlNs(prefix="bx", namespaceURI="http://bioxsd.org/BioXSD-1.1")})
 package ncbiseqout;
+import javax.xml.bind.annotation.*;
