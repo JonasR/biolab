@@ -8,6 +8,8 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.namespace.QName;
 
+import profisisout.FeatureRecord.BlockWithOccurrenceReferences.ScoreType;
+
 import profisisout.GeneralSequencePoint;
 import profisisout.SequencePosition;
 
@@ -15,11 +17,11 @@ import profisisout.FeatureType;
 import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.CondensedReferences;
 import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
 import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.Occurrence;
-
 import profisisout.BiosequenceRecord;
 import profisisout.EntryReference;
 import profisisout.FeatureRecord;
 import profisisout.ObjectFactory;
+import profisisout.Score;
 import profisisout.SemanticConcept;
 import profisisout.FeatureRecord.BlockWithOccurrenceReferences;
 import profisisout.FeatureRecord.ReferenceSequence;
@@ -81,13 +83,28 @@ private final String methodLocalId = "M#Pi";
 		piMethodCitation.setDbUri("http://www.ncbi.nlm.nih.gov/pubmed");
 		piMethodCitation.setAccession("17237081");
 		
-		
 		//NOTE: no relevant input and output parameters
 		
-		//TODO scoretypes (still to check whether senseful for this method)
+		populateScoreTypes(bwocr.getScoreType());
 		
 		//Annotation element
+		populateAnnotation(bwocr.getAnnotation());
+	}
+	
+	private void populateScoreTypes(List<ScoreType> list)
+	{
+		ScoreType st = new ScoreType();
+		list.add(st);
 		
+		//Populate score type
+		st.setLocalId("S#pi");
+		st.setName("Protein-protein interaction");
+		
+		// NOTE I don't believe we have anything to put into the code below...
+//		List<profisisout.Method> methodList= st.getMethod();
+//		profisisout.Method stMet = new profisisout.Method();
+//		stMet.setName("Protein-protein interaction");
+//		methodList.add(stMet);
 	}
 	
 	private void populateAnnotation(List<Annotation> list)
@@ -128,17 +145,19 @@ private final String methodLocalId = "M#Pi";
 		for (Long pos : positions)
 		{
 			Occurrence temp = new Occurrence();
-			//position
+			//Position
 			SequencePosition sp = new SequencePosition();
 			GeneralSequencePoint gsp = new GeneralSequencePoint();
 			gsp.setPos(pos);
 			sp.getPoint().add(gsp);
 			temp.setPosition(sp);
-			//score
-//			List<Score> ls = temp.getScore();
-//			Score s = new Score();
-//			s.setScoreTypeIdRef("S#lc");
-//			ls.add(s);
+			
+			//Score
+			List<Score> ls = temp.getScore();
+			Score s = new Score();
+			s.setScoreTypeIdRef("S#pi");
+			s.setValue("affe");	// TODO insert value here, we need a second list, or a hash
+			ls.add(s);
 			
 			list.add(temp);
 		}
