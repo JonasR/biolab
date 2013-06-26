@@ -6,6 +6,15 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.Marshaller;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
+import javax.xml.namespace.QName;
+
+import profisisout.GeneralSequencePoint;
+import profisisout.SequencePosition;
+
+import profisisout.FeatureType;
+import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.CondensedReferences;
+import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
+import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.Occurrence;
 
 import profisisout.BiosequenceRecord;
 import profisisout.EntryReference;
@@ -72,11 +81,68 @@ private final String methodLocalId = "M#Pi";
 		piMethodCitation.setDbUri("http://www.ncbi.nlm.nih.gov/pubmed");
 		piMethodCitation.setAccession("17237081");
 		
-		//TODO scoretypes
 		
-		//TODO annotation
+		//NOTE: no relevant input and output parameters
+		
+		//TODO scoretypes (still to check whether senseful for this method)
+		
+		//Annotation element
+		
 	}
 	
+	private void populateAnnotation(List<Annotation> list)
+	{
+		Annotation a = new Annotation();
+		list.add(a);
+		
+		//Populate annotation
+		////Feature
+		FeatureType aF = new FeatureType();
+		a.setFeature(aF);
+		
+		List<JAXBElement<?>> aFChildren = aF.getContent();
+		JAXBElement<String> aFName = new JAXBElement<String>(new QName("http://bioxsd.org/BioXSD-1.1","name","bx"), String.class , "Protein-protein interaction site");
+		aFChildren.add(aFName);
+		
+		//////Equal concept subelement
+		SemanticConcept equalConcept = new SemanticConcept();
+		equalConcept.setTerm("protein_protein_contact");
+		equalConcept.setConceptUri("http://purl.obolibrary.org/obo/SO_0001093");
+		equalConcept.setAccession("0001093");
+		equalConcept.setOntologyName("Sequence Ontology");
+		JAXBElement<SemanticConcept> afEqualConcept = new JAXBElement<SemanticConcept>(
+				new QName("http://bioxsd.org/BioXSD-1.1", "equalConcept","bx"), SemanticConcept.class, equalConcept);
+		aFChildren.add(afEqualConcept);
+		
+		//Condensed References
+		CondensedReferences cr =  new CondensedReferences();
+		cr.setMethodIdRef(this.methodLocalId);
+		
+		//Occurrences
+		List<Occurrence> lOcc = a.getOccurrence();
+		populateOccurences(lOcc, this.ppiSites);
+	}
+	
+	private void populateOccurences(List<Occurrence> list, List<Long> positions)
+	{
+		for (Long pos : positions)
+		{
+			Occurrence temp = new Occurrence();
+			//position
+			SequencePosition sp = new SequencePosition();
+			GeneralSequencePoint gsp = new GeneralSequencePoint();
+			gsp.setPos(pos);
+			sp.getPoint().add(gsp);
+			temp.setPosition(sp);
+			//score
+//			List<Score> ls = temp.getScore();
+//			Score s = new Score();
+//			s.setScoreTypeIdRef("S#lc");
+//			ls.add(s);
+			
+			list.add(temp);
+		}
+	}
 	
 	public void marshal()
 	{
