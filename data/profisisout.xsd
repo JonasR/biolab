@@ -1,0 +1,22 @@
+<!--
+profisis (ISIS) is a machine learning-based method that identifies interacting residues from sequence
+alone. Although the method is developed using transient protein-protein interfaces from complexes of
+experimentally known 3D structures, it never explicitly uses 3D infor- mation. Instead, we combine
+predicted structural features with evolutionary information. The strongest predictions of the method
+reached over 90% accuracy in a cross-validation experiment. Our results suggest that despite the
+significant diversity in the nature of protein-protein interactions, they all share common basic
+principles and that these principles are identifiable from sequence alone.
+-->
+<xs:schema xmlns="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/profisis/output" xmlns:bx="http://bioxsd.org/BioXSD-1.1"
+xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+targetNamespace="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/profisis/output" attributeFormDefault="unqualified" elementFormDefault="qualified"
+version="1.0.0">
+<xs:import namespace="http://bioxsd.org/BioXSD-1.1" schemaLocation="http://bioxsd.org/BioXSD-1.1.xsd"/>
+    <xs:element name="proteinProteinInteractionSite" type="bx:FeatureRecord" sawsdl:modelReference="http://edamontology.org/data_1565">
+        <xs:annotation>
+            <xs:documentation>
+            profisis - protein-protein interaction sites identified from sequence [http://edamontology.org/data_1565 Protein-protein interaction].
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+</xs:schema>
