@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
 import ncbisegout.BiosequenceRecord;
 import ncbisegout.EntryReference;
 import ncbisegout.FeatureRecord;
-import ncbisegout.FeatureRecord.Annotation.CondensedReferences;
+import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.CondensedReferences;
 import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences;
 import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.Annotation;
 import ncbisegout.FeatureRecord.BlockWithOccurrenceReferences.Annotation.Occurrence;
@@ -122,7 +122,7 @@ public class NcbiSeqOutput
 		
 		//Condensed References
 		CondensedReferences cr =  new CondensedReferences();
-
+		cr.setMethodIdRef(methodLocalId);
 		//TODO how to add methodidref?
 		
 		//Occurrences
