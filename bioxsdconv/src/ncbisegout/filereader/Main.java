@@ -17,7 +17,16 @@ public class Main {
 
         System.out.println(obj.idLine);
         System.out.println(obj.Sequence);
-        System.out.println(obj.lowComplexityRegions.toString());
-        System.out.println(obj.normalComplexityRegions.toString());
+        System.out.println("Low Complexity:");
+        for (Pair p : obj.lowComplexityRegions){
+            System.out.println(p.first + " - " + p.second);
+        }
+
+        System.out.println();
+
+        System.out.println("Normal Complexity:");
+        for (Pair p : obj.normalComplexityRegions){
+            System.out.println(p.first + " - " + p.second);
+        }
     }
 }
