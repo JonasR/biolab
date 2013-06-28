@@ -6,39 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * Created with IntelliJ IDEA.
- * User: delur
- * Date: 6/15/13
- * Time: 2:24 PM
- * To change this template use File | Settings | File Templates.
- */
-class ProfIsisObject{
-    String idLine;
-    String Sequence;
-    ArrayList<AminoAcid> positions;
-
-
-    ProfIsisObject(){
-        positions = new ArrayList <AminoAcid>();
-    }
-
-}
-
-class AminoAcid{
-    int position;
-    String aminoAcid;
-    int value;
-    boolean prediction;
-
-    AminoAcid( int position, String aminoAcid, int value, boolean prediction){
-        this.position = position;
-        this.aminoAcid = aminoAcid;
-        this.value = value;
-        this.prediction = prediction;
-    }
-}
-
 
 public class FileReader {
     BufferedReader in;

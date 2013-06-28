@@ -8,28 +8,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-
-/**
- * Created with IntelliJ IDEA.
- * User: delur
- * Date: 6/13/13
- * Time: 9:42 PM
- * To change this template use File | Settings | File Templates.
- */
-
-class NcbiSegObject{
-    String idLine;
-    String Sequence;
-    ArrayList<Pair<Integer,Integer>> lowComplexityRegions;
-    ArrayList<Pair<Integer,Integer>> normalComplexityRegions;
-
-    NcbiSegObject(){
-        lowComplexityRegions = new ArrayList <Pair<Integer,Integer>>();
-        normalComplexityRegions = new ArrayList <Pair<Integer,Integer>>();
-    }
-
-}
 
 
 public class FileReader {
