@@ -2,7 +2,7 @@ package ncbisegout.filereader;
 
 
 
-import javafx.util.Pair;
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,7 +37,7 @@ public class FileReader {
                         String[] positions = tokens[1].split("-");
                         Integer first = Integer.parseInt(positions[0]);
                         Integer second = Integer.parseInt(positions[1]);
-                        ncbiSegObject.lowComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                        ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
                     }
                     // add string to sequence
                     sequence += tokens[0].trim();
@@ -48,7 +48,7 @@ public class FileReader {
                         String[] positions = tokens[tokens.length-2].split("-");
                         Integer first = Integer.parseInt(positions[0]);
                         Integer second = Integer.parseInt(positions[1]);
-                        ncbiSegObject.normalComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                        ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
                     }
                     // add string to sequence
                     sequence += tokens[tokens.length-1].trim();
@@ -104,7 +104,7 @@ public class FileReader {
                     second = i;
                 }
                 else if( inLowComplexityRegion && Character.isUpperCase( sequence.charAt(i) ) ){
-                    ncbiSegObject.lowComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                    ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
                     inLowComplexityRegion = false;
                     first = i;
                     second = i;
@@ -113,7 +113,7 @@ public class FileReader {
                     second = i;
                 }
                 else if( !inLowComplexityRegion && Character.isLowerCase( sequence.charAt(i) ) ){
-                    ncbiSegObject.normalComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                    ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
                     inLowComplexityRegion = true;
                     first = i;
                     second = i;
@@ -158,7 +158,7 @@ public class FileReader {
                     second = i;
                 }
                 else if( inLowComplexityRegion && Character.isUpperCase( sequence.charAt(i) ) ){
-                    ncbiSegObject.lowComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                    ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
                     inLowComplexityRegion = false;
                     first = i;
                     second = i;
@@ -167,7 +167,7 @@ public class FileReader {
                     second = i;
                 }
                 else if( !inLowComplexityRegion && Character.isLowerCase( sequence.charAt(i) ) ){
-                    ncbiSegObject.normalComplexityRegions.add(new Pair<Integer,Integer>(first , second));
+                    ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
                     inLowComplexityRegion = true;
                     first = i;
                     second = i;
