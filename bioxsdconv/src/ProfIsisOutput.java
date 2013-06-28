@@ -26,29 +26,33 @@ import profisisout.SemanticConcept;
 import profisisout.FeatureRecord.BlockWithOccurrenceReferences;
 import profisisout.FeatureRecord.ReferenceSequence;
 import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Method;
+import profisisout.filereader.AminoAcid;
+import profisisout.filereader.ProfIsisObject;
 
 
 public class ProfIsisOutput {
 
 
-private final String methodLocalId = "M#Pi";
+	private final String methodLocalId = "M#Pi";
+	private final String scorePPIValue = "S#pi";
+	private final String scorePPIBool = "S#pr";
 	
 	private ObjectFactory of;
 	private FeatureRecord fr;
-	private List<Long> ppiSites;
+	private ProfIsisObject piObj;
 	
-	public ProfIsisOutput(List<Long> ppiSites)
+	public ProfIsisOutput(ProfIsisObject piObj)
 	{
 		of = new ObjectFactory();
 		fr = of.createFeatureRecord();
-		this.ppiSites = ppiSites;
+		this.piObj = piObj;
 	}
 	
-	public void make(String refSequence) throws DatatypeConfigurationException
+	public void make() throws DatatypeConfigurationException
 	{
 		ReferenceSequence refSeq = new ReferenceSequence();
 		BiosequenceRecord bioSeqRec = new BiosequenceRecord();
-		bioSeqRec.setSequence(refSequence);
+		bioSeqRec.setSequence(piObj.Sequence);
 		refSeq.setSequenceRecord(bioSeqRec);
 		fr.setReferenceSequence(refSeq);
 		
@@ -78,7 +82,8 @@ private final String methodLocalId = "M#Pi";
 		List<EntryReference> piMethodCitationList = piMethod.getCitation();
 		EntryReference piMethodCitation = new EntryReference();
 		piMethodCitationList.add(piMethodCitation);
-		piMethodCitation.setDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2007, 1, 15))); //output is too long, find a way to shorten this? 
+		GregorianCalendar cal = new GregorianCalendar(2007, 1, 15);
+		piMethodCitation.setDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(cal)); //TODO calendar output sucks, make it nicer? 
 		piMethodCitation.setDbName("PubMed");
 		piMethodCitation.setDbUri("http://www.ncbi.nlm.nih.gov/pubmed");
 		piMethodCitation.setAccession("17237081");
@@ -94,11 +99,20 @@ private final String methodLocalId = "M#Pi";
 	private void populateScoreTypes(List<ScoreType> list)
 	{
 		ScoreType st = new ScoreType();
+		ScoreType st2 = new ScoreType();
 		list.add(st);
+		list.add(st2);
 		
 		//Populate score type
-		st.setLocalId("S#pi");
-		st.setName("Protein-protein interaction");
+		st.setLocalId(scorePPIValue);
+		st.setName("Protein-protein interaction score");
+		st.setNote("The raw score");
+		
+		st2.setLocalId(scorePPIBool);
+		st2.setName("Protein-protein interaction prediction");
+		st2.setNote("The binary prediction whether the residue is an interacting residue or not");
+		
+		//st2.setUnit(value)
 		
 		// NOTE I don't believe we have anything to put into the code below...
 //		List<profisisout.Method> methodList= st.getMethod();
@@ -137,27 +151,36 @@ private final String methodLocalId = "M#Pi";
 		
 		//Occurrences
 		List<Occurrence> lOcc = a.getOccurrence();
-		populateOccurences(lOcc, this.ppiSites);
+		populateOccurences(lOcc, this.piObj);
 	}
 	
-	private void populateOccurences(List<Occurrence> list, List<Long> positions)
+	private void populateOccurences(List<Occurrence> list, ProfIsisObject piObj)
 	{
-		for (Long pos : positions)
+		List<AminoAcid> positions = piObj.positions;
+		for (AminoAcid aa: positions)
 		{
+			//TODO add 'prediction'
+			
 			Occurrence temp = new Occurrence();
 			//Position
 			SequencePosition sp = new SequencePosition();
 			GeneralSequencePoint gsp = new GeneralSequencePoint();
-			gsp.setPos(pos);
+			gsp.setPos(Long.valueOf(aa.position));
 			sp.getPoint().add(gsp);
 			temp.setPosition(sp);
 			
 			//Score
 			List<Score> ls = temp.getScore();
+			
 			Score s = new Score();
-			s.setScoreTypeIdRef("S#pi");
-			s.setValue("affe");	// TODO insert value here, we need a second list, or a hash
+			s.setScoreTypeIdRef(scorePPIValue);
+			s.setValue(aa.value+"");
 			ls.add(s);
+			
+			Score s2 = new Score();
+			s2.setScoreTypeIdRef(scorePPIBool);
+			s2.setValue(aa.prediction+"");
+			ls.add(s2);
 			
 			list.add(temp);
 		}

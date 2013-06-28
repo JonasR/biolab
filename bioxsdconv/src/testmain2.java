@@ -1,7 +1,10 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.datatype.DatatypeConfigurationException;
+
+import profisisout.filereader.FileReader;
 
 
 public class testmain2 {
@@ -17,8 +20,9 @@ public class testmain2 {
 		ll.add(100L);
 		ll.add(200L);
 		
-		ProfIsisOutput n = new ProfIsisOutput(ll);
-		n.make("CCCCCCCCCCCCCCCCGGGGG");
+		FileReader fr = new FileReader();
+		ProfIsisOutput n = new ProfIsisOutput(fr.read_profisis_prvalParam(new File("/home/jonas/gitRepos/biolab/data/output/profisisoutprval.profisis")));
+		n.make();
 		n.marshal();
 
 	}
