@@ -137,6 +137,7 @@ public class FileReader {
             while( (strLine = in.readLine()) != null){
                 if ( strLine.startsWith(">") ){  //read headerline
                     ncbiSegObject.idLine = strLine.substring(1);
+                    continue;
                 }
 
                 sequence += strLine.trim();

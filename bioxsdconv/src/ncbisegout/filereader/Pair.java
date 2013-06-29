@@ -8,8 +8,15 @@ package ncbisegout.filereader;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Pair{
-    int first;
+public class Pair
+{
+    public int getFirst() {
+		return first;
+	}
+	public int getSecond() {
+		return second;
+	}
+	int first;
     int second;
     public Pair(int first, int second){
          this.first = first;
