@@ -1,20 +1,17 @@
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+package ncbisegout.main;
 
-import javax.xml.datatype.DatatypeConfigurationException;
+import java.io.File;
 
 import ncbisegout.filereader.FileReader;
-import ncbisegout.main.NcbiSeqOutput;
 
+/**
+ * Convert a ncbi-seg output to XML using the XSD at http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbisegout.xsd
+ * @author jonas
+ *
+ */
+public class CreateNCBISegSchemaInstance {
 
-public class testmain {
-
-	/**
-	 * @param args
-	 * @throws DatatypeConfigurationException 
-	 */
-	public static void main(String[] args) throws DatatypeConfigurationException
+	public static void main(String[] args)
 	{
 		if(args.length == 0)
 		{
@@ -29,4 +26,5 @@ public class testmain {
 		n.make();
 		n.marshal();
 	}
+
 }
