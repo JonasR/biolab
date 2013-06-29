@@ -1,4 +1,4 @@
-package ncbisegout.main;
+package profisisout.main;
 import java.util.GregorianCalendar;
 import java.util.List;
 
