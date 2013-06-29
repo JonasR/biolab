@@ -1,3 +1,4 @@
+package ncbisegout.main;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -29,7 +30,11 @@ import profisisout.FeatureRecord.BlockWithOccurrenceReferences.Method;
 import profisisout.filereader.AminoAcid;
 import profisisout.filereader.ProfIsisObject;
 
-
+/**
+ * Write Profisis output to an XML file
+ * @author jonas
+ *
+ */
 public class ProfIsisOutput {
 
 
@@ -41,6 +46,10 @@ public class ProfIsisOutput {
 	private FeatureRecord fr;
 	private ProfIsisObject piObj;
 	
+	/**
+	 * 
+	 * @param piObj Contains the output of the profisis run
+	 */
 	public ProfIsisOutput(ProfIsisObject piObj)
 	{
 		of = new ObjectFactory();
@@ -48,7 +57,10 @@ public class ProfIsisOutput {
 		this.piObj = piObj;
 	}
 	
-	public void make() throws DatatypeConfigurationException
+	/**
+	 * Create XML
+	 */
+	public void make()
 	{
 		ReferenceSequence refSeq = new ReferenceSequence();
 		BiosequenceRecord bioSeqRec = new BiosequenceRecord();
@@ -67,7 +79,7 @@ public class ProfIsisOutput {
 		piMethod.setVersion("1.0.11");
 		piMethod.setLocalId(methodLocalId);
 		piMethod.setName("profisis");
-//		piMethod.set
+//		piMethod.setWsdl(value)
 		
 		////Category concept subelement
 		List<SemanticConcept> piMethodCatConList = piMethod.getCategoryConcept();
@@ -83,13 +95,15 @@ public class ProfIsisOutput {
 		EntryReference piMethodCitation = new EntryReference();
 		piMethodCitationList.add(piMethodCitation);
 		GregorianCalendar cal = new GregorianCalendar(2007, 1, 15);
-		piMethodCitation.setDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(cal)); //TODO calendar output sucks, make it nicer? 
+		try
+		{
+			piMethodCitation.setDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(cal));
+		} catch (DatatypeConfigurationException e) {} //this cannot go wrong... 
 		piMethodCitation.setDbName("PubMed");
 		piMethodCitation.setDbUri("http://www.ncbi.nlm.nih.gov/pubmed");
 		piMethodCitation.setAccession("17237081");
 		
-		//NOTE: no relevant input and output parameters
-		
+		//Score type element
 		populateScoreTypes(bwocr.getScoreType());
 		
 		//Annotation element
@@ -111,14 +125,6 @@ public class ProfIsisOutput {
 		st2.setLocalId(scorePPIBool);
 		st2.setName("Protein-protein interaction prediction");
 		st2.setNote("The binary prediction whether the residue is an interacting residue or not");
-		
-		//st2.setUnit(value)
-		
-		// NOTE I don't believe we have anything to put into the code below...
-//		List<profisisout.Method> methodList= st.getMethod();
-//		profisisout.Method stMet = new profisisout.Method();
-//		stMet.setName("Protein-protein interaction");
-//		methodList.add(stMet);
 	}
 	
 	private void populateAnnotation(List<Annotation> list)
@@ -158,10 +164,10 @@ public class ProfIsisOutput {
 	{
 		List<AminoAcid> positions = piObj.positions;
 		for (AminoAcid aa: positions)
-		{
-			//TODO add 'prediction'
-			
+		{		
 			Occurrence temp = new Occurrence();
+			list.add(temp);
+			
 			//Position
 			SequencePosition sp = new SequencePosition();
 			GeneralSequencePoint gsp = new GeneralSequencePoint();
@@ -169,7 +175,7 @@ public class ProfIsisOutput {
 			sp.getPoint().add(gsp);
 			temp.setPosition(sp);
 			
-			//Score
+			//ScoreList
 			List<Score> ls = temp.getScore();
 			
 			Score s = new Score();
@@ -181,11 +187,12 @@ public class ProfIsisOutput {
 			s2.setScoreTypeIdRef(scorePPIBool);
 			s2.setValue(aa.prediction+"");
 			ls.add(s2);
-			
-			list.add(temp);
 		}
 	}
 	
+	/**
+	 * Finalize XML and write to stdout. Requires previous execution of make()
+	 */
 	public void marshal()
 	{
 		try
