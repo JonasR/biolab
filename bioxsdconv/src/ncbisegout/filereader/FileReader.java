@@ -24,27 +24,33 @@ public class FileReader {
         }
 
         try {
-            String strLine;
-            while( (strLine = in.readLine()) != null){
-                if ( strLine.startsWith(">") ){  //read headerline
-                    ncbiSegObject.idLine = strLine.substring(1);
-                    strLine = in.readLine();  //skip empty line
-                }
+            String strLine = in.readLine();
+            if ( strLine.startsWith(">") ){  //read headerline
+                ncbiSegObject.idLine = strLine.substring(1);
+                in.readLine();  //skip empty line
+            }
 
-                String[] tokens = strLine.split("\\s");
+            while( (strLine = in.readLine()) != null){
+                String[] tokens = strLine.split("[\\s]+");
+
                 if (tokens[0].matches("[\\s]*[a-z]+") ) { // low complexity Region
-                    if (tokens[1].matches("-")){ //first line of region, add region to list
+                    //System.out.println("Low complexity!");
+                    if (tokens[1].matches("[\\d]+.[\\d]+")){ //first line of region, add region to list
                         String[] positions = tokens[1].split("-");
                         Integer first = Integer.parseInt(positions[0]);
                         Integer second = Integer.parseInt(positions[1]);
                         ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
+
                     }
                     // add string to sequence
                     sequence += tokens[0].trim();
 
                 }
                 else if ( tokens[tokens.length-1].matches("[A-Z]+") ){ // normal complexity region
-                    if (tokens[tokens.length-2].matches("-")){ //first line of region, add region to list
+                    //System.out.println("High complexity!");
+
+                    if (tokens[tokens.length-2].matches("[\\d]+.[\\d]+")){ //first line of region, add region to list
+                        //System.out.println("inner if!");
                         String[] positions = tokens[tokens.length-2].split("-");
                         Integer first = Integer.parseInt(positions[0]);
                         Integer second = Integer.parseInt(positions[1]);

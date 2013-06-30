@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args){
         //Tests
         FileReader fr = new FileReader();
-        NcbiSegObject obj = fr.read_ncbiseg_xParam(new File("/home/delur/biolab/ncbi-seg/ncbi_X.txt") );
+        NcbiSegObject obj = fr.read_ncbiseg_noParam(new File("/home/delur/biolab/ncbi-seg/ncbi_N.txt") );
 
         System.out.println(obj.idLine);
         System.out.println(obj.Sequence);
