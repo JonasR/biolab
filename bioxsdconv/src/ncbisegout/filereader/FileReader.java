@@ -170,27 +170,35 @@ public class FileReader {
         {
             // build Region lists from Sequence
             boolean inLowComplexityRegion = Character.isLowerCase( sequence.charAt(0) );
-            int first = 0;
-            int second = 0;
+            int first = 1;
+            int second = 1;
             for (int i = 1; i < sequence.length(); i++){
                 if ( inLowComplexityRegion && Character.isLowerCase( sequence.charAt(i) ) ){
-                    second = i;
+                    second = i+1;
                 }
                 else if( inLowComplexityRegion && Character.isUpperCase( sequence.charAt(i) ) ){
                     ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
                     inLowComplexityRegion = false;
-                    first = i;
-                    second = i;
+                    first = i+1;
+                    second = i+1;
                 }
                 else if ( !inLowComplexityRegion && Character.isUpperCase( sequence.charAt(i) ) ){
-                    second = i;
+                    second = i+1;
                 }
                 else if( !inLowComplexityRegion && Character.isLowerCase( sequence.charAt(i) ) ){
                     ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
                     inLowComplexityRegion = true;
-                    first = i;
-                    second = i;
+                    first = i+1;
+                    second = i+1;
                 }
+
+            }
+            second = sequence.length();
+            if( inLowComplexityRegion){
+                ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
+            }
+            else{
+                ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
             }
         }
         return ncbiSegObject;
