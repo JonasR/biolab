@@ -31,19 +31,19 @@ public class FileReader {
             }
 
             while( (strLine = in.readLine()) != null){
-                String[] tokens = strLine.split("[\\s]+");
-                System.out.println(strLine);
-                System.out.println(tokens[0].matches("[a-z]+"));
+                String[] tokens = strLine.trim().split("[\\s]+");
 
-                if (tokens[0].matches("([a-z]+)|(\\s* [a-z]+)") ) { // low complexity Region
-                    System.out.println("Low complexity! + " + tokens.length);
-                    if (tokens[1].matches("[\\d]+.[\\d]+")){ //first line of region, add region to list
-                        String[] positions = tokens[1].split("-");
-                        Integer first = Integer.parseInt(positions[0]);
-                        Integer second = Integer.parseInt(positions[1]);
-                        ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
+                if (tokens[0].matches("([a-z]+)") ) { // low complexity Region
+                    if (tokens.length !=1){
+                        if (tokens[1].matches("[\\d]+.[\\d]+")){ //first line of region, add region to list
+                            String[] positions = tokens[1].split("-");
+                            Integer first = Integer.parseInt(positions[0]);
+                            Integer second = Integer.parseInt(positions[1]);
+                            ncbiSegObject.lowComplexityRegions.add(new Pair(first , second));
 
+                        }
                     }
+
                     // add string to sequence
                     sequence += tokens[0].trim();
 
@@ -51,13 +51,16 @@ public class FileReader {
                 else if ( tokens[tokens.length-1].matches("[A-Z]+") ){ // normal complexity region
                     //System.out.println("High complexity!");
 
-                    if (tokens[tokens.length-2].matches("[\\d]+.[\\d]+")){ //first line of region, add region to list
-                        //System.out.println("inner if!");
-                        String[] positions = tokens[tokens.length-2].split("-");
-                        Integer first = Integer.parseInt(positions[0]);
-                        Integer second = Integer.parseInt(positions[1]);
-                        ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
+                    if (tokens.length !=1){
+                        if (tokens[0].matches("[\\d]+.[\\d]+")){ //first line of region, add region to list
+                            //System.out.println("inner if!");
+                            String[] positions = tokens[tokens.length-2].split("-");
+                            Integer first = Integer.parseInt(positions[0]);
+                            Integer second = Integer.parseInt(positions[1]);
+                            ncbiSegObject.normalComplexityRegions.add(new Pair(first , second));
+                        }
                     }
+
                     // add string to sequence
                     sequence += tokens[tokens.length-1].trim();
                 }
