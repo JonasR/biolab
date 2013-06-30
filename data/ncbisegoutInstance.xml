@@ -2,7 +2,7 @@
 <fox:lowComplexityRegion xmlns:fox="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output" xmlns:bx="http://bioxsd.org/BioXSD-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbisegout.xsd">
    <bx:referenceSequence>
       <bx:sequenceRecord>
-         <bx:sequence>MANLGCWMLVLFVATWSDLGLCKKRPKPGGWNTGGSRYPGQGSPGGNRYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxTHSQWNKPSKPKTNMKHMxxxxxxxxxxxxxxxxxxxxxxxRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCVNITIKQHxxxxxxxxxxxxxxDVKMMERVVEQMCITQYERESQAYYQRGSSMVLFSxxxxxxxxxxxxxxxxG</bx:sequence>
+         <bx:sequence>MANLGCWMLVLFVATWSDLGLCKKRPKPGGWNTGGSRYPGQGSPGGNRYPPQGGGGWGQPHGGGWGQPHGGGWGQPHGGGWGQPHGGGWGQGGGTHSQWNKPSKPKTNMKHMAGAAAAGAVVGGLGGYMLGSAMSRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCVNITIKQHTVTTTTKGENFTETDVKMMERVVEQMCITQYERESQAYYQRGSSMVLFSSPPVILLISFLIFLIVG</bx:sequence>
       </bx:sequenceRecord>
    </bx:referenceSequence>
    <bx:blockWithOccurrenceReferences>
@@ -18,27 +18,57 @@
          </bx:feature>
          <bx:occurrence>
             <bx:position xsi:type="bx:SequencePosition">
-               <bx:segment min="49" max="93" />
+               <bx:segment min="50" max="94" />
             </bx:position>
             <bx:score value="true" scoreTypeIdRef="S#lc" />
          </bx:occurrence>
          <bx:occurrence>
             <bx:position xsi:type="bx:SequencePosition">
-               <bx:segment min="112" max="134" />
+               <bx:segment min="113" max="135" />
             </bx:position>
             <bx:score value="true" scoreTypeIdRef="S#lc" />
          </bx:occurrence>
          <bx:occurrence>
             <bx:position xsi:type="bx:SequencePosition">
-               <bx:segment min="187" max="200" />
+               <bx:segment min="188" max="201" />
             </bx:position>
             <bx:score value="true" scoreTypeIdRef="S#lc" />
          </bx:occurrence>
          <bx:occurrence>
             <bx:position xsi:type="bx:SequencePosition">
-               <bx:segment min="236" max="251" />
+               <bx:segment min="237" max="252" />
             </bx:position>
             <bx:score value="true" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="1" max="49" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="95" max="112" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="136" max="187" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="202" max="236" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="253" max="253" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
          </bx:occurrence>
       </bx:annotation>
    </bx:blockWithOccurrenceReferences>

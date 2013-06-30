@@ -21,7 +21,7 @@ public class CreateNCBISegSchemaInstance {
 		File fOutput = new File(args[0]);
 		
 		FileReader fr = new FileReader();
-		NcbiSeqOutput n = new NcbiSeqOutput(fr.read_ncbiseg_noParam(fOutput));
+		NcbiSeqOutput n = new NcbiSeqOutput(fr.read_ncbiseg_qParam(fOutput));
 		
 		n.make();
 		n.marshal();
