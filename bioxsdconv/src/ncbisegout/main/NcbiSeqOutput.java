@@ -56,7 +56,7 @@ public class NcbiSeqOutput
 	{
 		ReferenceSequence refSeq = new ReferenceSequence();
 		BiosequenceRecord bioSeqRec = new BiosequenceRecord();
-		bioSeqRec.setSequence(nsObj.Sequence);
+		bioSeqRec.setSequence(nsObj.Sequence.toUpperCase());
 		refSeq.setSequenceRecord(bioSeqRec);
 		fr.setReferenceSequence(refSeq);		
 		List<Object> bwocrList = fr.getAnnotationOrBlockWithOccurrenceReferences();
@@ -166,6 +166,29 @@ public class NcbiSeqOutput
 			s.setValue("true"); //NOTE not the most ideal thing, but every score must contain a value...
 			ls.add(s);
 		}
+		
+		List<Pair> hcrs = nsObj.normalComplexityRegions;
+		for (Pair region : hcrs)
+		{
+			Occurrence temp = new Occurrence();
+			list.add(temp);
+			
+			//Position
+			SequencePosition sp = new SequencePosition();
+			GeneralSequenceSegment gse = new GeneralSequenceSegment();
+			gse.setMin(Long.valueOf(region.getFirst()));
+			gse.setMax(Long.valueOf(region.getSecond()));
+			sp.getSegment().add(gse);
+			temp.setPosition(sp);
+			
+			//ScoreList 
+			List<Score> ls = temp.getScore();
+			
+			Score s = new Score();
+			s.setScoreTypeIdRef(scoreLowCompl);
+			s.setValue("false");
+			ls.add(s);
+		}
 	}
 	
 	/**
@@ -181,7 +204,6 @@ public class NcbiSeqOutput
 			Marshaller m = jc.createMarshaller();
 			m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbisegout.xsd");
 			m.marshal(je, System.out);
-			
 		}
 		catch(Exception ex)
 		{
