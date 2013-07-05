@@ -1,0 +1,3 @@
+usr/share/bioxsdconv/bioxsdconv.jar:
+ Main-Class: Main
+ Debian-Java-Home: /usr/lib/jvm/java-7-oracle
