@@ -1,0 +1,13 @@
+Source: ncbisegbioxsd
+Section: misc
+Priority: optional
+Maintainer: uwe <uwe@uwe.tbl>
+Build-Depends: debhelper (>= 8), oracle-java7-installer, ncbi-seg, javahelper (>= 0.40ubuntu1.1) 
+Standards-Version: 3.9.3
+
+Package: ncbisegbioxsd
+Architecture: all
+Depends: ${java:Depends}, ${misc:Depends}
+Recommends: ${java:Recommends}
+Description: Short Description
+ Long Description

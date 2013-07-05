@@ -1,0 +1,3 @@
+usr/share/ncbisegbioxsd/ncbisegbioxsd.jar:
+ Main-Class: ncbisegout.main.CreateNCBISegSchemaInstance
+ Debian-Java-Home: /usr/lib/jvm/java-7-oracle

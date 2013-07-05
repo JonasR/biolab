@@ -1,12 +1,11 @@
-Source: bioxsdconv
+Source: profisisbioxsd
 Section: misc
 Priority: optional
 Maintainer: uwe <uwe@uwe.tbl>
-Build-Depends: debhelper (>= 8), oracle-java7-installer, ncbi-seg, javahelper (>= 0.40ubuntu1.1) 
+Build-Depends: debhelper (>= 8), oracle-java7-installer, profisis, javahelper (>= 0.40ubuntu1.1) 
 Standards-Version: 3.9.3
-#Homepage: <uajrrw@uajrrw.tbl.com>
 
-Package: bioxsdconv
+Package: profisisbioxsd
 Architecture: all
 Depends: ${java:Depends}, ${misc:Depends}
 Recommends: ${java:Recommends}
