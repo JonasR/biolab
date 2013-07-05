@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fox:proteinProteinInteractionSite xmlns:fox="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/profisis/output" xmlns:bx="http://bioxsd.org/BioXSD-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/profisis/output http://i12r-tbl.informatik.tu-muenchen.de/~jonas/profisisout.xsd">
+   <bx:referenceSequence>
+      <bx:sequenceRecord>
+         <bx:sequence>MRLVEIGRFGAPYALKGGLRFRGEPVVLHLERVYVEGHGWRAIEDLYRVGEELVVHLAGVTDRTLAEALVGLRVYAEVADLPPLEEGRYYYFALIGLPVYVEGRQVGEVVDILDAGAQDVLIIRGVGERLRDRAERLVPLQAPYVRVEEGSIHVDPIPGLFD</bx:sequence>
+      </bx:sequenceRecord>
+   </bx:referenceSequence>
+   <bx:blockWithOccurrenceReferences>
+      <bx:method localId="M#Pi" name="profisis" version="1.0.11">
+         <bx:categoryConcept accession="2464" conceptUri="http://edamontology.org/operation_2464" term="Protein-protein interaction prediction" ontologyName="EDAM" />
+         <bx:citation accession="17237081" date="2007-02-15+01:00" dbName="PubMed" dbUri="http://www.ncbi.nlm.nih.gov/pubmed" />
+      </bx:method>
+      <bx:scoreType localId="S#pi" name="Protein-protein interaction score" note="The raw score" />
+      <bx:scoreType localId="S#pr" name="Protein-protein interaction prediction" note="The binary prediction whether the residue is an interacting residue or not" />
+      <bx:annotation>
+         <bx:feature>
+            <bx:name>Protein-protein interaction site</bx:name>
+            <bx:equalConcept accession="0001093" conceptUri="http://purl.obolibrary.org/obo/SO_0001093" term="protein_protein_contact" ontologyName="Sequence Ontology" />
+         </bx:feature>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="1" />
+            </bx:position>
+            <bx:score value="17" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="2" />
+            </bx:position>
+            <bx:score value="20" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="3" />
+            </bx:position>
+            <bx:score value="8" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="4" />
+            </bx:position>
+            <bx:score value="-67" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="5" />
+            </bx:position>
+            <bx:score value="30" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="6" />
+            </bx:position>
+            <bx:score value="-66" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="7" />
+            </bx:position>
+            <bx:score value="-69" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="8" />
+            </bx:position>
+            <bx:score value="0" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="9" />
+            </bx:position>
+            <bx:score value="-46" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="10" />
+            </bx:position>
+            <bx:score value="-7" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="11" />
+            </bx:position>
+            <bx:score value="5" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="12" />
+            </bx:position>
+            <bx:score value="4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="13" />
+            </bx:position>
+            <bx:score value="32" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="14" />
+            </bx:position>
+            <bx:score value="4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="15" />
+            </bx:position>
+            <bx:score value="-25" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="16" />
+            </bx:position>
+            <bx:score value="12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="17" />
+            </bx:position>
+            <bx:score value="-36" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="18" />
+            </bx:position>
+            <bx:score value="-12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="19" />
+            </bx:position>
+            <bx:score value="-63" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="20" />
+            </bx:position>
+            <bx:score value="-7" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="21" />
+            </bx:position>
+            <bx:score value="-76" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="22" />
+            </bx:position>
+            <bx:score value="1" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="23" />
+            </bx:position>
+            <bx:score value="-11" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="24" />
+            </bx:position>
+            <bx:score value="19" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="25" />
+            </bx:position>
+            <bx:score value="-12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="26" />
+            </bx:position>
+            <bx:score value="10" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="27" />
+            </bx:position>
+            <bx:score value="-37" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="28" />
+            </bx:position>
+            <bx:score value="16" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="29" />
+            </bx:position>
+            <bx:score value="30" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="30" />
+            </bx:position>
+            <bx:score value="35" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="31" />
+            </bx:position>
+            <bx:score value="41" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="32" />
+            </bx:position>
+            <bx:score value="38" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="33" />
+            </bx:position>
+            <bx:score value="4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="34" />
+            </bx:position>
+            <bx:score value="-23" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="35" />
+            </bx:position>
+            <bx:score value="8" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="36" />
+            </bx:position>
+            <bx:score value="16" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="37" />
+            </bx:position>
+            <bx:score value="32" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="38" />
+            </bx:position>
+            <bx:score value="8" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="39" />
+            </bx:position>
+            <bx:score value="4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="40" />
+            </bx:position>
+            <bx:score value="-1" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="41" />
+            </bx:position>
+            <bx:score value="-11" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="42" />
+            </bx:position>
+            <bx:score value="-24" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="43" />
+            </bx:position>
+            <bx:score value="-64" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="44" />
+            </bx:position>
+            <bx:score value="27" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="45" />
+            </bx:position>
+            <bx:score value="30" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="46" />
+            </bx:position>
+            <bx:score value="-38" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="47" />
+            </bx:position>
+            <bx:score value="15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="48" />
+            </bx:position>
+            <bx:score value="11" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="49" />
+            </bx:position>
+            <bx:score value="9" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="50" />
+            </bx:position>
+            <bx:score value="5" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="51" />
+            </bx:position>
+            <bx:score value="12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="52" />
+            </bx:position>
+            <bx:score value="30" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="53" />
+            </bx:position>
+            <bx:score value="-57" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="54" />
+            </bx:position>
+            <bx:score value="-68" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="55" />
+            </bx:position>
+            <bx:score value="-81" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="56" />
+            </bx:position>
+            <bx:score value="-20" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="57" />
+            </bx:position>
+            <bx:score value="-79" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="58" />
+            </bx:position>
+            <bx:score value="-30" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="59" />
+            </bx:position>
+            <bx:score value="-23" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="60" />
+            </bx:position>
+            <bx:score value="-39" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="61" />
+            </bx:position>
+            <bx:score value="-2" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="62" />
+            </bx:position>
+            <bx:score value="-5" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="63" />
+            </bx:position>
+            <bx:score value="16" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="64" />
+            </bx:position>
+            <bx:score value="-14" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="65" />
+            </bx:position>
+            <bx:score value="-9" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="66" />
+            </bx:position>
+            <bx:score value="-56" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="67" />
+            </bx:position>
+            <bx:score value="6" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="68" />
+            </bx:position>
+            <bx:score value="-10" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="69" />
+            </bx:position>
+            <bx:score value="-55" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="70" />
+            </bx:position>
+            <bx:score value="-12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="71" />
+            </bx:position>
+            <bx:score value="-8" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="72" />
+            </bx:position>
+            <bx:score value="3" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="73" />
+            </bx:position>
+            <bx:score value="15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="74" />
+            </bx:position>
+            <bx:score value="-68" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="75" />
+            </bx:position>
+            <bx:score value="14" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="76" />
+            </bx:position>
+            <bx:score value="-56" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="77" />
+            </bx:position>
+            <bx:score value="-11" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="78" />
+            </bx:position>
+            <bx:score value="-4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="79" />
+            </bx:position>
+            <bx:score value="-13" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="80" />
+            </bx:position>
+            <bx:score value="3" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="81" />
+            </bx:position>
+            <bx:score value="-13" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="82" />
+            </bx:position>
+            <bx:score value="-21" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="83" />
+            </bx:position>
+            <bx:score value="-10" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="84" />
+            </bx:position>
+            <bx:score value="-17" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="85" />
+            </bx:position>
+            <bx:score value="-2" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="86" />
+            </bx:position>
+            <bx:score value="1" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="87" />
+            </bx:position>
+            <bx:score value="-4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="88" />
+            </bx:position>
+            <bx:score value="-4" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="89" />
+            </bx:position>
+            <bx:score value="-68" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="90" />
+            </bx:position>
+            <bx:score value="-26" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="91" />
+            </bx:position>
+            <bx:score value="-82" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="92" />
+            </bx:position>
+            <bx:score value="-41" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="93" />
+            </bx:position>
+            <bx:score value="-15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="94" />
+            </bx:position>
+            <bx:score value="-66" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="95" />
+            </bx:position>
+            <bx:score value="-48" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="96" />
+            </bx:position>
+            <bx:score value="-37" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="97" />
+            </bx:position>
+            <bx:score value="-65" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="98" />
+            </bx:position>
+            <bx:score value="-35" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="99" />
+            </bx:position>
+            <bx:score value="-76" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="100" />
+            </bx:position>
+            <bx:score value="6" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="101" />
+            </bx:position>
+            <bx:score value="-6" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="102" />
+            </bx:position>
+            <bx:score value="9" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="103" />
+            </bx:position>
+            <bx:score value="20" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="104" />
+            </bx:position>
+            <bx:score value="38" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="105" />
+            </bx:position>
+            <bx:score value="13" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="106" />
+            </bx:position>
+            <bx:score value="-26" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="107" />
+            </bx:position>
+            <bx:score value="-62" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="108" />
+            </bx:position>
+            <bx:score value="1" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="109" />
+            </bx:position>
+            <bx:score value="-65" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="110" />
+            </bx:position>
+            <bx:score value="-18" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="111" />
+            </bx:position>
+            <bx:score value="-15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="112" />
+            </bx:position>
+            <bx:score value="-68" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="113" />
+            </bx:position>
+            <bx:score value="-46" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="114" />
+            </bx:position>
+            <bx:score value="-8" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="115" />
+            </bx:position>
+            <bx:score value="-12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="116" />
+            </bx:position>
+            <bx:score value="-21" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="117" />
+            </bx:position>
+            <bx:score value="-25" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="118" />
+            </bx:position>
+            <bx:score value="-13" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="119" />
+            </bx:position>
+            <bx:score value="-7" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="120" />
+            </bx:position>
+            <bx:score value="-50" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="121" />
+            </bx:position>
+            <bx:score value="-83" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="122" />
+            </bx:position>
+            <bx:score value="-49" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="123" />
+            </bx:position>
+            <bx:score value="-74" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="124" />
+            </bx:position>
+            <bx:score value="-19" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="125" />
+            </bx:position>
+            <bx:score value="-37" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="126" />
+            </bx:position>
+            <bx:score value="-16" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="127" />
+            </bx:position>
+            <bx:score value="15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="128" />
+            </bx:position>
+            <bx:score value="34" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="129" />
+            </bx:position>
+            <bx:score value="44" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="130" />
+            </bx:position>
+            <bx:score value="55" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="131" />
+            </bx:position>
+            <bx:score value="50" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="132" />
+            </bx:position>
+            <bx:score value="47" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="133" />
+            </bx:position>
+            <bx:score value="22" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="134" />
+            </bx:position>
+            <bx:score value="2" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="135" />
+            </bx:position>
+            <bx:score value="-6" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="136" />
+            </bx:position>
+            <bx:score value="-15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="137" />
+            </bx:position>
+            <bx:score value="-78" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="138" />
+            </bx:position>
+            <bx:score value="-63" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="139" />
+            </bx:position>
+            <bx:score value="-65" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="140" />
+            </bx:position>
+            <bx:score value="-68" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="141" />
+            </bx:position>
+            <bx:score value="-56" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="142" />
+            </bx:position>
+            <bx:score value="-21" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="143" />
+            </bx:position>
+            <bx:score value="10" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="144" />
+            </bx:position>
+            <bx:score value="-3" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="145" />
+            </bx:position>
+            <bx:score value="-57" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="146" />
+            </bx:position>
+            <bx:score value="-18" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="147" />
+            </bx:position>
+            <bx:score value="-13" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="148" />
+            </bx:position>
+            <bx:score value="21" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="149" />
+            </bx:position>
+            <bx:score value="15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="150" />
+            </bx:position>
+            <bx:score value="-7" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="151" />
+            </bx:position>
+            <bx:score value="-13" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="152" />
+            </bx:position>
+            <bx:score value="-79" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="153" />
+            </bx:position>
+            <bx:score value="11" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="154" />
+            </bx:position>
+            <bx:score value="-77" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="155" />
+            </bx:position>
+            <bx:score value="19" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="156" />
+            </bx:position>
+            <bx:score value="-2" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="157" />
+            </bx:position>
+            <bx:score value="23" scoreTypeIdRef="S#pi" />
+            <bx:score value="true" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="158" />
+            </bx:position>
+            <bx:score value="12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="159" />
+            </bx:position>
+            <bx:score value="-11" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="160" />
+            </bx:position>
+            <bx:score value="-45" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="161" />
+            </bx:position>
+            <bx:score value="12" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:point pos="162" />
+            </bx:position>
+            <bx:score value="15" scoreTypeIdRef="S#pi" />
+            <bx:score value="false" scoreTypeIdRef="S#pr" />
+         </bx:occurrence>
+      </bx:annotation>
+   </bx:blockWithOccurrenceReferences>
+</fox:proteinProteinInteractionSite>

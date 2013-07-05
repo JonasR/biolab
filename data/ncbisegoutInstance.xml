@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fox:lowComplexityRegion xmlns:fox="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output" xmlns:bx="http://bioxsd.org/BioXSD-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbisegout.xsd">
+   <bx:referenceSequence>
+      <bx:sequenceRecord>
+         <bx:sequence>MANLGCWMLVLFVATWSDLGLCKKRPKPGGWNTGGSRYPGQGSPGGNRYPPQGGGGWGQPHGGGWGQPHGGGWGQPHGGGWGQPHGGGWGQGGGTHSQWNKPSKPKTNMKHMAGAAAAGAVVGGLGGYMLGSAMSRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCVNITIKQHTVTTTTKGENFTETDVKMMERVVEQMCITQYERESQAYYQRGSSMVLFSSPPVILLISFLIFLIVG</bx:sequence>
+      </bx:sequenceRecord>
+   </bx:referenceSequence>
+   <bx:blockWithOccurrenceReferences>
+      <bx:method localId="M#Se" name="ncbi-seg" version="0.0.20000620">
+         <bx:categoryConcept accession="0234" conceptUri="http://edamontology.org/operation_0234" term="Sequence complexity calculation" ontologyName="EDAM" />
+         <bx:citation date="1993-06-01+02:00" />
+      </bx:method>
+      <bx:scoreType localId="S#lc" name="Low complexity segment prediction" note="The binary prediction whether the segment is low complexity" />
+      <bx:annotation>
+         <bx:feature>
+            <bx:name>Low complexity residue</bx:name>
+            <bx:equalConcept accession="0001005" conceptUri="http://purl.obolibrary.org/obo/SO_0001005" term="low_complexity_region" ontologyName="Sequence Ontology" />
+         </bx:feature>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="50" max="94" />
+            </bx:position>
+            <bx:score value="true" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="113" max="135" />
+            </bx:position>
+            <bx:score value="true" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="188" max="201" />
+            </bx:position>
+            <bx:score value="true" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="237" max="252" />
+            </bx:position>
+            <bx:score value="true" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="1" max="49" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="95" max="112" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="136" max="187" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="202" max="236" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+         <bx:occurrence>
+            <bx:position xsi:type="bx:SequencePosition">
+               <bx:segment min="253" max="253" />
+            </bx:position>
+            <bx:score value="false" scoreTypeIdRef="S#lc" />
+         </bx:occurrence>
+      </bx:annotation>
+   </bx:blockWithOccurrenceReferences>
+</fox:lowComplexityRegion>
