@@ -18,6 +18,7 @@ dh clean --with javahelper
  dpkg-source -b ncbisegbioxsd-0.0.1
 dpkg-source: info: using source format `3.0 (quilt)'
 dpkg-source: info: building ncbisegbioxsd using existing ./ncbisegbioxsd_0.0.1.orig.tar.gz
+dpkg-source: warning: ignoring deletion of file ncbisegbioxsd.jar
 dpkg-source: info: building ncbisegbioxsd in ncbisegbioxsd_0.0.1-1.debian.tar.gz
 dpkg-source: info: building ncbisegbioxsd in ncbisegbioxsd_0.0.1-1.dsc
  debian/rules build

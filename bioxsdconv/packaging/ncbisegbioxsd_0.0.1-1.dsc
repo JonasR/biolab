@@ -11,11 +11,11 @@ Build-Depends: debhelper (>= 8), oracle-java7-installer, ncbi-seg, javahelper (>
 Package-List: 
  ncbisegbioxsd deb misc optional
 Checksums-Sha1: 
- e4f16840b46df72a54b804a387d1ec0b0cff2c75 2923 ncbisegbioxsd_0.0.1.orig.tar.gz
- 9fde40db037014d893b853288a15f07724998c15 2138 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ e8ef2e540e4b3bc45463bebdee90f93f608616eb 632125 ncbisegbioxsd_0.0.1.orig.tar.gz
+ d950dc1a3c9ab0e6936e612aec953f28887d232d 2139 ncbisegbioxsd_0.0.1-1.debian.tar.gz
 Checksums-Sha256: 
- 42fdafd38f64ea3ddb2591f319ea3dc0d0b7db56d8be9ac164c499cc207cd957 2923 ncbisegbioxsd_0.0.1.orig.tar.gz
- 1954f67e8542e83b5f9a7d82159f1186db0a95fcfc8cad1e91b8493b959ba146 2138 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ 71f68c3e7d32ab3616e7df8ef5c455cf41ea4afbd8c7633fffe4a5644a64043a 632125 ncbisegbioxsd_0.0.1.orig.tar.gz
+ 868e1c039fc4e0f683769e31287d0c79071b47116148574b4d27ee38f478a9eb 2139 ncbisegbioxsd_0.0.1-1.debian.tar.gz
 Files: 
- e674ff7ebcbdbb7eb5e5b360b426b6fd 2923 ncbisegbioxsd_0.0.1.orig.tar.gz
- 1bf5b61c27227fd669c148601dcd980f 2138 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ e639660e2de9b65dd2cd77e46e64e10b 632125 ncbisegbioxsd_0.0.1.orig.tar.gz
+ 41f662273a9db1e2c04ea2ef874e947b 2139 ncbisegbioxsd_0.0.1-1.debian.tar.gz
