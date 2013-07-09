@@ -1,0 +1,20 @@
+Source: ncbisegbioxsd
+Section: misc
+Priority: optional
+Maintainer: uwe <uwe@uwe.tbl>
+Build-Depends: debhelper (>= 8), oracle-java7-installer, ncbi-seg, javahelper (>= 0.40ubuntu1.1) 
+Standards-Version: 3.9.3
+Homepage: http://uwe.tbl/
+Vcs-Browser: https://github.com/JonasR/biolab.git
+
+Package: ncbisegbioxsd
+Architecture: all
+Depends: ${java:Depends}, ${misc:Depends}
+Recommends: ${java:Recommends}
+Description: ncbiseg with bioxsd conform xml output
+ The original ncbi-seg divides sequences into contrasting segments 
+ of low-complexity and high-complexity.  Low complexity segments 
+ defined by the algorithm represent "simple sequences" or "compositionally-
+ biased regions".
+ This Output converter for the orig. ncbi-seg converts the standard output 
+ into bioxsd conform xml.

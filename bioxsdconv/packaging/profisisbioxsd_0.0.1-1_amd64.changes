@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Thu, 04 Jul 2013 22:10:32 +0200
+Source: profisisbioxsd
+Binary: profisisbioxsd
+Architecture: source all
+Version: 0.0.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: uwe <uwe@uwe.tbl>
+Changed-By: uwe <uwe@uwe.tbl>
+Description: 
+ profisisbioxsd - profisis with bioxsd conform xml output
+Closes: 123456
+Changes: 
+ profisisbioxsd (0.0.1-1) unstable; urgency=low
+ .
+   * Initial release. (Closes: #123456)
+Checksums-Sha1: 
+ 63d99ef596942747278b8733430c74585a9777b4 952 profisisbioxsd_0.0.1-1.dsc
+ fd062a436f6d52759ad9192309f885ab53393fa4 632134 profisisbioxsd_0.0.1.orig.tar.gz
+ 6c6e00bf742e2076a50ae216f026e68de371dab0 2210 profisisbioxsd_0.0.1-1.debian.tar.gz
+ 30936fd290e7e44936fbe1788fce3891376d1921 142378 profisisbioxsd_0.0.1-1_all.deb
+Checksums-Sha256: 
+ 10a81aef4e3505f0e530791b2472dc79f06ef9b9dfbfc602bc15666ab850c0bc 952 profisisbioxsd_0.0.1-1.dsc
+ 08f633ede2c389dcf2228767d17c9c9087470dcb7848a6732cb7a9de8561239e 632134 profisisbioxsd_0.0.1.orig.tar.gz
+ 4622cf6ef64f4ea1a2ba9aac232aaeab07588489666b8ebdba152ac0ad957851 2210 profisisbioxsd_0.0.1-1.debian.tar.gz
+ 1a8092c0b6a22353d8a6f201a8810355828d996bcb71b522ef31a92985407902 142378 profisisbioxsd_0.0.1-1_all.deb
+Files: 
+ 96484eddb0e54e777c8f11b09e622db0 952 misc optional profisisbioxsd_0.0.1-1.dsc
+ a5c2759da151acb7aec5afee1931c69c 632134 misc optional profisisbioxsd_0.0.1.orig.tar.gz
+ 557569abd73fd852a066c99ba73fb80a 2210 misc optional profisisbioxsd_0.0.1-1.debian.tar.gz
+ 9e26227a9cc59bb7b32fd3deb14b63f7 142378 misc optional profisisbioxsd_0.0.1-1_all.deb

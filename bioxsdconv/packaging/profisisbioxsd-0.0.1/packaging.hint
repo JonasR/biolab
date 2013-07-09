@@ -1,0 +1,31 @@
+for packaging:
+
+you should have installed: oracle-java7-installer, profisis, javahelper, dh-make
+check this with: dpkg --get-selections | grep javahelper (or other)
+
+to build a package:
+1. change in dir containing src, debian ...
+cd .../profisisbioxsd-0.0.1
+
+2. build the orig.tar (single binary) ...
+dh_make --createorig
+
+3. build the package:
+debuild -us -uc
+
+4. check with lintian (should replay only one warning 'executable-not-elf-or-script'):
+lintian --color=always --display-experimental --display-info --pedantic --show-overrides ../profisisbioxsd_0.0.1-1_all.deb
+
+5. install package:
+sudo dpkg -i ../profisisbioxsd_0.0.1-1_all.deb
+
+6. check man page:
+man profisisbioxsd
+
+7. purge package:
+sudo dpkg -P profisisbioxsd
+
+8. check changes:
+dpkg --get-selections | grep profisisbioxsd
+
+

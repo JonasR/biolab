@@ -1,0 +1,19 @@
+Source: profisisbioxsd
+Section: misc
+Priority: optional
+Maintainer: uwe <uwe@uwe.tbl>
+Build-Depends: debhelper (>= 8), oracle-java7-installer, profisis, javahelper (>= 0.40ubuntu1.1) 
+Standards-Version: 3.9.3
+Homepage: http://uwe.tbl/
+Vcs-Browser: https://github.com/JonasR/biolab.git
+
+Package: profisisbioxsd
+Architecture: all
+Depends: ${java:Depends}, ${misc:Depends}
+Recommends: ${java:Recommends}
+Description: profisis with bioxsd conform xml output
+ The original profisis (ISIS) is a machine learning-based 
+ method that identifies interacting residues from sequence
+ alone.
+ This output converter for the orig. profisis converts the
+ standard output into bioxsd conform xml.

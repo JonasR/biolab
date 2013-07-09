@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Thu, 04 Jul 2013 22:10:32 +0200
+Source: ncbisegbioxsd
+Binary: ncbisegbioxsd
+Architecture: source all
+Version: 0.0.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: uwe <uwe@uwe.tbl>
+Changed-By: uwe <uwe@uwe.tbl>
+Description: 
+ ncbisegbioxsd - ncbiseg with bioxsd conform xml output
+Closes: 123456
+Changes: 
+ ncbisegbioxsd (0.0.1-1) unstable; urgency=low
+ .
+   * Initial release. (Closes: #123456)
+Checksums-Sha1: 
+ 2eef61a92d2c4c19c4503e05589cebf4c49c00cb 937 ncbisegbioxsd_0.0.1-1.dsc
+ e4f16840b46df72a54b804a387d1ec0b0cff2c75 2923 ncbisegbioxsd_0.0.1.orig.tar.gz
+ 9fde40db037014d893b853288a15f07724998c15 2138 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ 3351f9e813fbec409c1641b5e874f8ad6df10b1b 142452 ncbisegbioxsd_0.0.1-1_all.deb
+Checksums-Sha256: 
+ 56a0bef235457fb7e6a85d19d9d17984bb73a8b51e081872f64c414d62b9af2b 937 ncbisegbioxsd_0.0.1-1.dsc
+ 42fdafd38f64ea3ddb2591f319ea3dc0d0b7db56d8be9ac164c499cc207cd957 2923 ncbisegbioxsd_0.0.1.orig.tar.gz
+ 1954f67e8542e83b5f9a7d82159f1186db0a95fcfc8cad1e91b8493b959ba146 2138 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ c95004ccafae01559102c323d0f2e8923e1df2a9116d6aee167a1565427a4a03 142452 ncbisegbioxsd_0.0.1-1_all.deb
+Files: 
+ 0402acba73982f6e1a9431952f5c8cc5 937 misc optional ncbisegbioxsd_0.0.1-1.dsc
+ e674ff7ebcbdbb7eb5e5b360b426b6fd 2923 misc optional ncbisegbioxsd_0.0.1.orig.tar.gz
+ 1bf5b61c27227fd669c148601dcd980f 2138 misc optional ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ 3811ed4e4c080ffbb7d5a9afce410f8c 142452 misc optional ncbisegbioxsd_0.0.1-1_all.deb

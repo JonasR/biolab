@@ -1,0 +1,32 @@
+Name: profisisbioxsd
+Contact: Uwe <uwe@uwe.tbl>
+Homepage: http://uwe.tbl/
+Reference:
+ - Author: - Ofran Y. and Rost B.
+   Title: - ISIS: interaction sites identified from sequence.
+   Journal: - Bioinformatics. 2007 Jan 15;23(2):e13-6.
+   Year: - 2007 
+Software:
+ - Name: profisisbioxsd
+   Topic:
+     - Protein-protein interactions: http://edamontology.org/topic_0147
+     - Protein feature detection: http://edamontology.org/topic_3074
+   Function:
+     - Protein-protein interaction prediction: http://edamontology.org/operation_2464
+   Input:
+     Data:
+       - Protein features (secondary structure): http://edamontology.org/data_0876
+       - Protein solvent accessibility: http://edamontology.org/data_1542
+       - Protein sequence: http://edamontology.org/data_2976
+       - Secondary structure alignment (protein): http://edamontology.org/data_0878
+     Format:
+       - fasta
+       - hssp: http://edamontology.org/format_1455
+       - rdb: http://manpages.ubuntu.com/manpages/raring/man1/prof.1.html
+   Output:
+     Data:
+       - Protein-protein interaction: http://edamontology.org/data_1565 
+     Format:
+       - BioXSD: 'http://edamontology.org/format_2352'
+   Interface:
+     - Command Line Interface: http://www.ebi.ac.uk/swo/interface/SWO_9000053

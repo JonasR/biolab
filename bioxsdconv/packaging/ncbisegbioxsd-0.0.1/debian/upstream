@@ -1,0 +1,26 @@
+Name: ncbisegbioxsd
+Contact: Uwe <uwe@uwe.tbl>
+Homepage: http://uwe.tbl/
+Reference:
+ - Author: - Wootton, J.C. and Federhen, S.
+   Title: - Statistics of local complexity in amino acid sequences and sequence databases.
+   Journal: - Computers & Chemistry 17: 149-163.
+   Year: - 1993
+Software:
+ - Name: ncbisegbioxsd
+   Topic:
+     - Low complexity sequences: http://edamontology.org/topic_0642i
+   Function:
+     - Sequence complexity calculation: http://edamontology.org/operation_0234
+   Input:
+     Data:
+       - Protein sequence http://edamontology.org/data_2976
+     Format:
+       - fasta
+   Output:
+     Data:
+       - Sequence complexity: http://edamontology.org/data_1259
+     Format:
+       - BioXSD: 'http://edamontology.org/format_2352'
+   Interface:
+     - Command Line Interface: http://www.ebi.ac.uk/swo/interface/SWO_9000053
