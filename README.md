@@ -5,8 +5,8 @@ Conversion of ncbi-seg and profisis output to BioXSD standardized XMLs.
 
 Work assignment
 ---------------
-All: extracting metadata for .xsd and 'Software' field from EDAM
-Uwe: Packaging, (Webservice)
-Robert: Outputreading/parsing
-Jonas: XML-Binding/Conversion
+* All: extracting metadata for .xsd and 'Software' field from EDAM
+* Uwe: Packaging, (Webservice)
+* Robert: Outputreading/parsing
+* Jonas: XML-Binding/Conversion
 
