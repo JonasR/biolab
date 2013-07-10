@@ -1,6 +1,9 @@
 package ncbisegout.main;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 import ncbisegout.filereader.FileReader;
 

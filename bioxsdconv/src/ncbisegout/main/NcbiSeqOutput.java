@@ -1,4 +1,5 @@
 package ncbisegout.main;
+import java.io.StringWriter;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -209,6 +210,30 @@ public class NcbiSeqOutput
 		{
 			ex.printStackTrace();
 		}
+	}
+
+	/**
+	 * Finalize XML and write to stdout. Requires previous execution of make()
+	 */
+	public String marshalToString()
+	{
+		StringWriter sw = new StringWriter();
+
+		try
+		{
+			JAXBElement<FeatureRecord> je = of.createLowComplexityRegion(fr);
+			
+			JAXBContext jc = JAXBContext.newInstance("ncbisegout");
+			Marshaller m = jc.createMarshaller();
+			m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbiseq/output http://i12r-tbl.informatik.tu-muenchen.de/~jonas/ncbisegout.xsd");
+			m.marshal(je, sw);
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		
+		return sw.toString();
 	}
 
 }
