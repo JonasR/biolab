@@ -56,12 +56,12 @@ import javax.xml.bind.annotation.XmlType;
 public class FeatureType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "classConcept", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "properties", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "equalAlias", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "className", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "name", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "equalConcept", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "classConcept", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class),
+        @XmlElementRef(name = "properties", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class),
+        @XmlElementRef(name = "equalAlias", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class),
+        @XmlElementRef(name = "className", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class),
+        @XmlElementRef(name = "name", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class),
+        @XmlElementRef(name = "equalConcept", namespace = "http://bioxsd.org/BioXSD-1.1", type = JAXBElement.class)
     })
     protected List<JAXBElement<?>> content;
 
