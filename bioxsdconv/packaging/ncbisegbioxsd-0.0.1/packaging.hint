@@ -14,7 +14,7 @@ dh_make --createorig
 debuild -us -uc
 
 4. check with lintian (should replay only one warning 'executable-not-elf-or-script'):
-lintian lintian ../ncbisegbioxsd_0.0.1-1_all.deb
+lintian --color=always --display-experimental --display-info --pedantic --show-overrides ../ncbisegbioxsd_0.0.1-1_all.deb
 
 5. install package:
 sudo dpkg -i ../ncbisegbioxsd_0.0.1-1_all.deb

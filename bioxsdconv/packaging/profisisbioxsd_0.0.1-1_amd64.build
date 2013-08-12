@@ -28,12 +28,10 @@ dh build --with javahelper
    jh_linkjars
    dh_auto_build
    jh_build
-find ../../src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/java-7-oracle/bin/javac -cp /usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar:debian/_jh_build.profisisbioxsd -d debian/_jh_build.profisisbioxsd -source 1.5
-warning: [options] bootstrap class path not set in conjunction with -source 1.5
-1 warning
-find ../../src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/java-7-oracle/bin/javadoc -classpath /usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar:debian/_jh_build.profisisbioxsd -d debian/_jh_build.javadoc/api -quiet
+find src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/default-java/bin/javac -cp :debian/_jh_build.profisisbioxsd -d debian/_jh_build.profisisbioxsd -source 1.5
+find src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/default-java/bin/javadoc -classpath :debian/_jh_build.profisisbioxsd -d debian/_jh_build.javadoc/api -quiet
 Creating destination directory: "debian/_jh_build.javadoc/api/"
-/usr/lib/jvm/java-7-oracle/bin/jar cfm /home/uwe/Desktop/dinge/Studium/10.Semester/BioInfLab/exercises/biolab/bioxsdconv/packaging/profisisbioxsd-0.0.1/profisisbioxsd.jar ../_jh_manifest.profisisbioxsd ncbisegout profisisout
+/usr/lib/jvm/default-java/bin/jar cfm /home/uwe/Desktop/dinge/Studium/10.Semester/BioInfLab/exercises/biolab/bioxsdconv/packaging/profisisbioxsd-0.0.1/profisisbioxsd.jar ../_jh_manifest.profisisbioxsd profisisout
    dh_auto_test
  fakeroot debian/rules binary
 dh binary --with javahelper

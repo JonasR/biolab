@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. (Closes: #123456)
 Checksums-Sha1: 
- 3bb7eaf3584a0a6544c84d3b838b41de25144762 943 ncbisegbioxsd_0.0.1-1.dsc
- e8ef2e540e4b3bc45463bebdee90f93f608616eb 632125 ncbisegbioxsd_0.0.1.orig.tar.gz
- d950dc1a3c9ab0e6936e612aec953f28887d232d 2139 ncbisegbioxsd_0.0.1-1.debian.tar.gz
- aa7064ed096572f064c7ec05b985b4f0f47fb7d7 142446 ncbisegbioxsd_0.0.1-1_all.deb
+ 53b6caa35a3262445bd50e1535f550e007dd9953 932 ncbisegbioxsd_0.0.1-1.dsc
+ 2411701dea39a57815a1bb7a7f49a85497e947f8 288230 ncbisegbioxsd_0.0.1.orig.tar.gz
+ 4f090a0977b4ef1ff79716c850c9ef18153ebab3 2101 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ 6f8eeb51703bcdc7a1c2e3b99206d4cccc28615e 73248 ncbisegbioxsd_0.0.1-1_all.deb
 Checksums-Sha256: 
- e174978529b63a747d2573e33e6627b9d51715d679f411c76aa0a5d2d1d19313 943 ncbisegbioxsd_0.0.1-1.dsc
- 71f68c3e7d32ab3616e7df8ef5c455cf41ea4afbd8c7633fffe4a5644a64043a 632125 ncbisegbioxsd_0.0.1.orig.tar.gz
- 868e1c039fc4e0f683769e31287d0c79071b47116148574b4d27ee38f478a9eb 2139 ncbisegbioxsd_0.0.1-1.debian.tar.gz
- 59418733a4a4e4801f903202d539e034222221722bc54edcd948513a6963f517 142446 ncbisegbioxsd_0.0.1-1_all.deb
+ af609296bc7d9aa5296eef221fef54293bf7fce519dbd2cc11c0a16e19612b9a 932 ncbisegbioxsd_0.0.1-1.dsc
+ fefb3e18a271c4db9d23826af40bb63f05c9978461911663974fa5673c8dd819 288230 ncbisegbioxsd_0.0.1.orig.tar.gz
+ cf5aeb11e53f98e68c4ca7e3537ad267074ba278e1b848f351dc475e6410fa7f 2101 ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ 1205cef167904c6bda78a8b22b7c3d1c87b15c9e9a1c5d93cd359af3e6240a64 73248 ncbisegbioxsd_0.0.1-1_all.deb
 Files: 
- a6701d62f4eed4d8d783a0d416efc879 943 misc optional ncbisegbioxsd_0.0.1-1.dsc
- e639660e2de9b65dd2cd77e46e64e10b 632125 misc optional ncbisegbioxsd_0.0.1.orig.tar.gz
- 41f662273a9db1e2c04ea2ef874e947b 2139 misc optional ncbisegbioxsd_0.0.1-1.debian.tar.gz
- 4f85962539948d8af6ac5c54cadfa507 142446 misc optional ncbisegbioxsd_0.0.1-1_all.deb
+ 7520a8919ad81ccd0008743235b3e85d 932 misc optional ncbisegbioxsd_0.0.1-1.dsc
+ 4069c8a74f73603224df4e91e55c8f24 288230 misc optional ncbisegbioxsd_0.0.1.orig.tar.gz
+ 61c136dee76bbabee4fca2a3c900681c 2101 misc optional ncbisegbioxsd_0.0.1-1.debian.tar.gz
+ 660a52134a17389be0291d02b4006417 73248 misc optional ncbisegbioxsd_0.0.1-1_all.deb

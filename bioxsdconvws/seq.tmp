@@ -5,3 +5,32 @@
 121 vvgglggymlgsamsRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCV
 181 NITIKQHtvttttkgenftetDVKMMERVVEQMCITQYERESQAYYQRGSSMVLFSsppv
 241 illisfliflivG 253
+
+wsgen -classpath build/classes/ -wsdl -r WebContent/WEB-INF/wsdl -s src -d build/classes/ tbl.uwe.BioXsWebservice
+
+%3EPRIO_HUMAN+MAJOR+PRION+PROTEIN+PRECURSOR+.+.+.+.+.+.+1+MANLGCWMLVLFVATWSDLGLCKKRPKPGGWNTGGSRYPGQGSPGGNRYppqggggwgqp+61+hgggwgqphgggwgqphgggwgqphgggwgqgggTHSQWNKPSKPKTNMKHMagaaaaga+121+vvgglggymlgsamsRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCV+181+NITIKQHtvttttkgenftetDVKMMERVVEQMCITQYERESQAYYQRGSSMVLFSsppv+241+illisfliflivG+253
+
+curl -H "Content-Type: text/xml; charset=utf-8" -H "SOAPAction:http://www.webserviceX.NET/GetWeather" 
+
+
+Dear Laszlo,
+
+we send you the required files for the semester challenge (attachment semesterChallenge.tar.gz).
+Our project is available as git repository: https://github.com/JonasR/biolab.git.
+We implemented a output BioXsd-converter for both tools (ncbi-seg, profisis) with the use of java. 
+Packaging was done in use of java-helper (see (project)/packaging/(tool)/packaging.hint).
+The BioXsd-converter for ncbi-seg is available as SOAP-WS: http://uwe.tbl:8080/bioxsdconvws/ncbiseg?wsdl.
+
+Work was split as follows:
+  ALL:    extracting metadata for .xsd and 'Software' field from EDAM
+  Robert: Outputreading/parsing
+  Jonas:  XML-Binding/Conversion
+  Uwe:    Packaging/Webservice
+
+Best regards
+Uwe, Robert, Jonas
+ 
+
+
+
+

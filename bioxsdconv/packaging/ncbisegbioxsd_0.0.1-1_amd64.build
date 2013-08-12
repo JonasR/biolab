@@ -18,7 +18,6 @@ dh clean --with javahelper
  dpkg-source -b ncbisegbioxsd-0.0.1
 dpkg-source: info: using source format `3.0 (quilt)'
 dpkg-source: info: building ncbisegbioxsd using existing ./ncbisegbioxsd_0.0.1.orig.tar.gz
-dpkg-source: warning: ignoring deletion of file ncbisegbioxsd.jar
 dpkg-source: info: building ncbisegbioxsd in ncbisegbioxsd_0.0.1-1.debian.tar.gz
 dpkg-source: info: building ncbisegbioxsd in ncbisegbioxsd_0.0.1-1.dsc
  debian/rules build
@@ -28,12 +27,10 @@ dh build --with javahelper
    jh_linkjars
    dh_auto_build
    jh_build
-find ../../src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/java-7-oracle/bin/javac -cp /usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar:debian/_jh_build.ncbisegbioxsd -d debian/_jh_build.ncbisegbioxsd -source 1.5
-warning: [options] bootstrap class path not set in conjunction with -source 1.5
-1 warning
-find ../../src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/java-7-oracle/bin/javadoc -classpath /usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar:debian/_jh_build.ncbisegbioxsd -d debian/_jh_build.javadoc/api -quiet
+find src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/default-java/bin/javac -cp :debian/_jh_build.ncbisegbioxsd -d debian/_jh_build.ncbisegbioxsd -source 1.5
+find src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/default-java/bin/javadoc -classpath :debian/_jh_build.ncbisegbioxsd -d debian/_jh_build.javadoc/api -quiet
 Creating destination directory: "debian/_jh_build.javadoc/api/"
-/usr/lib/jvm/java-7-oracle/bin/jar cfm /home/uwe/Desktop/dinge/Studium/10.Semester/BioInfLab/exercises/biolab/bioxsdconv/packaging/ncbisegbioxsd-0.0.1/ncbisegbioxsd.jar ../_jh_manifest.ncbisegbioxsd ncbisegout profisisout
+/usr/lib/jvm/default-java/bin/jar cfm /home/uwe/Desktop/dinge/Studium/10.Semester/BioInfLab/exercises/biolab/bioxsdconv/packaging/ncbisegbioxsd-0.0.1/ncbisegbioxsd.jar ../_jh_manifest.ncbisegbioxsd ncbisegout
    dh_auto_test
  fakeroot debian/rules binary
 dh binary --with javahelper

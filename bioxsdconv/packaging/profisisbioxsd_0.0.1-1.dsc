@@ -7,15 +7,15 @@ Maintainer: uwe <uwe@uwe.tbl>
 Homepage: http://uwe.tbl/
 Standards-Version: 3.9.3
 Vcs-Browser: https://github.com/JonasR/biolab.git
-Build-Depends: debhelper (>= 8), oracle-java7-installer, profisis, javahelper (>= 0.40ubuntu1.1)
+Build-Depends: debhelper (>= 8), default-jdk, profisis, javahelper (>= 0.40ubuntu1.1)
 Package-List: 
  profisisbioxsd deb misc optional
 Checksums-Sha1: 
- fd062a436f6d52759ad9192309f885ab53393fa4 632134 profisisbioxsd_0.0.1.orig.tar.gz
- 6c6e00bf742e2076a50ae216f026e68de371dab0 2210 profisisbioxsd_0.0.1-1.debian.tar.gz
+ 625c6f0e8f6a45f3f64ee32bae733be5f3e7c5e5 355233 profisisbioxsd_0.0.1.orig.tar.gz
+ e055e4bbdf285b050989c2c5b054295c857cb933 2164 profisisbioxsd_0.0.1-1.debian.tar.gz
 Checksums-Sha256: 
- 08f633ede2c389dcf2228767d17c9c9087470dcb7848a6732cb7a9de8561239e 632134 profisisbioxsd_0.0.1.orig.tar.gz
- 4622cf6ef64f4ea1a2ba9aac232aaeab07588489666b8ebdba152ac0ad957851 2210 profisisbioxsd_0.0.1-1.debian.tar.gz
+ 882533d3f52c3f0a482e2cf15d05c9982daabf1b20a7199666a6efc7f6649ace 355233 profisisbioxsd_0.0.1.orig.tar.gz
+ 548c5f0eadbb2dcd639e2abd789f0ecf33c6f7df0ab6fe00fe6b39e6ebdb925a 2164 profisisbioxsd_0.0.1-1.debian.tar.gz
 Files: 
- a5c2759da151acb7aec5afee1931c69c 632134 profisisbioxsd_0.0.1.orig.tar.gz
- 557569abd73fd852a066c99ba73fb80a 2210 profisisbioxsd_0.0.1-1.debian.tar.gz
+ 2eb9affb116b489027a0015d5a262b6c 355233 profisisbioxsd_0.0.1.orig.tar.gz
+ a6924ff52686029bbfe017c2ce0382ac 2164 profisisbioxsd_0.0.1-1.debian.tar.gz
